@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_root"
+    app:startDestination="@id/onboardingFragment">
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="ru.ll.coffeebonus.ui.profile.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_profile_to_coffee"
+            app:destination="@+id/coffeeDialogFragment">
+            <argument
+                android:name="ARG_COFFEESHOP"
+                app:argType="ru.ll.coffeebonus.domain.CoffeeShop" />
+        </action>
+        <action
+            android:id="@+id/action_profile_to_coffeeAll"
+            app:destination="@+id/coffeeAllFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/coffeeAllFragment"
+        android:name="ru.ll.coffeebonus.ui.coffeeAll.CoffeeAllFragment"
+        android:label="CoffeeAll"
+        tools:layout="@layout/fragment_coffee_all">
+        <action
+            android:id="@+id/action_coffee_all_to_coffee"
+            app:destination="@+id/coffeeDialogFragment">
+            <argument
+                android:name="ARG_COFFEESHOP"
+                app:argType="ru.ll.coffeebonus.domain.CoffeeShop" />
+        </action>
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/onboardingFragment"
+        android:name="ru.ll.coffeebonus.ui.map.OnboardingFragment"
+        android:label="Onboarding"
+        tools:layout="@layout/fragment_onboarding">
+
+        <action
+            android:id="@+id/action_onboarding_to_profile"
+            app:destination="@+id/profileFragment" />
+        <action
+            android:id="@+id/action_onboarding_to_login"
+            app:destination="@+id/loginFragment">
+            <argument
+                android:name="ARG_OPEN_PROFILE"
+                app:argType="boolean" />
+        </action>
+        <action
+            android:id="@+id/action_onboarding_to_game"
+            app:destination="@+id/GameFragment">
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="ru.ll.coffeebonus.ui.login.LoginFragment"
+        android:label="Login"
+        tools:layout="@layout/fragment_login">
+        <argument
+            android:name="ARG_OPEN_PROFILE"
+            app:argType="boolean" />
+        <action
+            android:id="@+id/action_login_to_profile"
+            app:destination="@+id/profileFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/coffeeDialogFragment"
+        android:name="ru.ll.coffeebonus.ui.coffee.CoffeeFragment"
+        android:label="Coffee"
+        tools:layout="@layout/fragment_coffee">
+        <argument
+            android:name="ARG_COFFEESHOP"
+            app:argType="ru.ll.coffeebonus.domain.CoffeeShop" />
+        <action
+            android:id="@+id/action_coffee_to_login"
+            app:destination="@+id/loginFragment">
+            <argument
+                android:name="ARG_OPEN_PROFILE"
+                app:argType="boolean" />
+        </action>
+    </fragment>
+
+    <action
+        android:id="@+id/action_bonus_to_login"
+        app:destination="@+id/loginFragment">
+        <argument
+            android:name="ARG_OPEN_PROFILE"
+            app:argType="boolean" />
+    </action>
+</navigation>
