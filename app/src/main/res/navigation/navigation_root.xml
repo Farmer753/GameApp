@@ -40,6 +40,10 @@
         android:name="com.example.gameapplication.ui.profile.ProfileFragment"
         android:label="Profile"
         tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_profile_to_settings"
+            app:destination="@+id/settingsFragment">
+        </action>
     </fragment>
 
     <fragment

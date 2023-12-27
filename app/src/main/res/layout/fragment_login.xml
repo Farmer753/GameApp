@@ -16,4 +16,14 @@
         app:title="Login"
         app:titleTextColor="@color/white" />
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/buttonToProfile"
+        android:text="На экран профиля"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="100dp"
+        android:gravity="center"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
