@@ -8,10 +8,10 @@ import com.example.gameapplication.databinding.FragmentSettingsBinding
 import com.example.gameapplication.ui.BaseFragment
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class SettingsFragment : BaseFragment<FragmentSettingsBinding, TopViewModel>() {
+class SettingsFragment : BaseFragment<FragmentSettingsBinding, SettingsViewModel>() {
 
 
-    override val viewModel: TopViewModel by viewModel()
+    override val viewModel: SettingsViewModel by viewModel()
 
     override val bindingInflater: (LayoutInflater, ViewGroup?, Boolean) -> FragmentSettingsBinding =
         FragmentSettingsBinding::inflate
