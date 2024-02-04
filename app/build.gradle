@@ -34,6 +34,20 @@ android {
     buildFeatures {
         viewBinding true
     }
+//
+//    buildscript {
+//        repositories {
+//            google()
+//            mavenCentral()
+//        }
+//    }
+//
+//    allprojects {
+//        repositories {
+//            google()
+//            mavenCentral()
+//        }
+//    }
 }
 
 dependencies {
@@ -53,4 +67,7 @@ dependencies {
     def nav_version = "2.7.6"
     implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
     implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+
+//Yandex Mobile Ads
+    implementation 'com.yandex.android:mobileads:6.3.0'
 }
