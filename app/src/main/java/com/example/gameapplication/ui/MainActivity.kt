@@ -12,7 +12,7 @@ import com.yandex.mobile.ads.common.AdSize
 class MainActivity : AppCompatActivity() {
 companion object{
     const val AD_ID = "R-M-5703407-1"
-    const val AD_WIDTH = 3200
+    const val AD_WIDTH = 320
     const val AD_HEIGHT = 500
 }
 

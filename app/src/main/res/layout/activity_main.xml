@@ -21,8 +21,8 @@
 
     <com.yandex.mobile.ads.banner.BannerAdView
         android:id="@+id/bannerAd"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
        app:layout_constraintBottom_toTopOf="@+id/nav_host_fragment"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
