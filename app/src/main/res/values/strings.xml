@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">Game Application</string>
+    <string name="profile">Профиль</string>
+    <string name="logout">Выход</string>
+    <string name="settings">Настройки</string>
+    <string name="login">Авторизация</string>
+    <string name="enter">Войти</string>
+    <string name="retry">Перезагрузить</string>
+    <string name="dark_theme">Темная тема</string>
+    <string name="dark_theme_non">Светлая тема</string>
+    <string name="dark_theme_yes">Темная тема</string>
+    <string name="dark_theme_system">Как в системе</string>
+    <string name="game">Играть!</string>
+    <string name="top">Таблица лидеров</string>
 </resources>
