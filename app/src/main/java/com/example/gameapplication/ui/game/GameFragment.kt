@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.gameapplication.databinding.FragmentGameBinding
 import com.example.gameapplication.ui.BaseFragment
-import com.example.gameapplication.ui.profile.GameViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class GameFragment : BaseFragment<FragmentGameBinding, GameViewModel>() {
@@ -25,4 +24,8 @@ class GameFragment : BaseFragment<FragmentGameBinding, GameViewModel>() {
         }
     }
 
+    override fun onResume() {
+        super.onResume()
+        viewModel.test()
+    }
 }

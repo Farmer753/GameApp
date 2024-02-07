@@ -8,6 +8,7 @@ import androidx.navigation.fragment.findNavController
 import com.example.gameapplication.R
 import com.example.gameapplication.databinding.FragmentProfileBinding
 import com.example.gameapplication.ui.BaseFragment
+import com.example.gameapplication.ui.game.GameViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class ProfileFragment : BaseFragment<FragmentProfileBinding, GameViewModel>() {
